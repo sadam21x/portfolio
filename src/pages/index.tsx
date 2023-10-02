@@ -1,7 +1,9 @@
+import Layout from '@/layouts/Main'
+
 export default function Home() {
   return (
-    <div>
+    <Layout>
       Hello World
-    </div>
+    </Layout>
   )
 }
