@@ -9,7 +9,7 @@ export default function Navbar() {
 
   const [menus] = useState([
     { name: 'Home', href: '/' },
-    { name: 'About Me', href: '/about-me' },
+    { name: 'About Me', href: '/about' },
     { name: 'Projects', href: '/projects' },
   ])
 
