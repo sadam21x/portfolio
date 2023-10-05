@@ -19,7 +19,7 @@ const variants = {
   exit: { opacity: 0, x: 0, y: -100 },
 }
 
-function MainLayout(props: Props) {
+export default function MainLayout(props: Props) {
   const title = props.meta?.title
     ? `${props.meta.title} | Sadam Portfolio`
     : 'Sadam Portfolio'
@@ -53,5 +53,3 @@ function MainLayout(props: Props) {
     </>
   )
 }
-
-export default MainLayout

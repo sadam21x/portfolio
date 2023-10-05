@@ -36,7 +36,7 @@ export default function Header() {
 
         <div className='font-semibold text-center mt-4 lg:text-left lg:ml-4 lg:mt-20'>
           <p className='text-2xl'>Sadam</p>
-          <p className='text-lg text-blue-800'>Software Engineer</p>
+          <p className='text-lg text-primary'>Software Engineer</p>
         </div>
 
         <div className='flex items-center gap-4 mt-4 lg:ml-auto lg:mt-20'>

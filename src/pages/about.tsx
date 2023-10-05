@@ -6,7 +6,7 @@ export default function About() {
   return (
     <Layout meta={meta}>
       <article className='prose max-w-none prose-headings:mb-2'>
-        <h2 className='text-blue-800'>
+        <h2 className='text-primary'>
           Hola! I&apos;m Sadam 👋
         </h2>
 
@@ -14,7 +14,7 @@ export default function About() {
           A guy who loves coding and coffee. I&apos;m a software engineer based in the beautiful island of Bali 🏝️
         </p>
 
-        <h2 className='text-blue-800'>
+        <h2 className='text-primary'>
           My Background
         </h2>
 
@@ -43,7 +43,7 @@ export default function About() {
           months later.
         </p>
         
-        <h2 className='text-blue-800'>
+        <h2 className='text-primary'>
           What&apos;s next?
         </h2>
 

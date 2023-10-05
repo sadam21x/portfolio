@@ -14,10 +14,10 @@ const config: Config = {
   },
   plugins: [
     require('@tailwindcss/typography'),
-    require("daisyui")
+    require('daisyui'),
   ],
   daisyui: {
-    themes: ["light"]
+    themes: ['fantasy'],
   },
 }
 export default config

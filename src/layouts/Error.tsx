@@ -9,7 +9,7 @@ type Props = {
   }
 }
 
-function ErrorLayout(props: Props) {
+export default function ErrorLayout(props: Props) {
   const title = props.meta?.title ? props.meta.title : 'Sadam LAB'
   const description = props.meta?.description || "Sadam's personal website"
   const keywords =
@@ -28,5 +28,3 @@ function ErrorLayout(props: Props) {
     </>
   )
 }
-
-export default ErrorLayout
