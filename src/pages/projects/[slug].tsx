@@ -5,6 +5,7 @@ import { MDXRemote } from 'next-mdx-remote'
 import { serialize } from 'next-mdx-remote/serialize'
 import { getSlugs, findProject } from '@/utils/project'
 import Layout from '@/layouts/Project'
+import ImageSlideshow from '@/components/ImageSlideshow'
 
 type Params = {
   slug: string
@@ -13,6 +14,10 @@ type Params = {
 type Props = {
   project: Project
   source: MDXRemoteSerializeResult
+}
+
+const components = {
+  ImageSlideshow,
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
@@ -53,7 +58,7 @@ export const getStaticProps: GetStaticProps<Props, Params> = async ({ params }) 
 export default function Project(props: Props) {
   return (
     <Layout project={props.project}>
-      <MDXRemote {...props.source} />
+      <MDXRemote {...props.source} components={components} />
     </Layout>
   )
 }
