@@ -1,2 +1,2 @@
 # Portfolio
-This is my personal website, an online space where I can share my experience, some thoughts, snippets, etc. Feel free to contribute or fork this project.
+My simple portfolio website. Built with [Next.js](https://nextjs.org/) and [Tailwind CSS](https://tailwindcss.com/). Feel free to use it as reference for your own portfolio 😉.
