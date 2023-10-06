@@ -1,4 +1,4 @@
-$tw-blue-700: rgb(29 78 216);
+$tw-primary: #6E0B75;
 
 .link {
   position: relative;
@@ -13,13 +13,13 @@ $tw-blue-700: rgb(29 78 216);
     position: absolute;
     bottom: -0.5rem;
     left: 50%;
-    background-color: $tw-blue-700;
+    background-color: $tw-primary;
     border-radius: 0.1rem;
     transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
   }
 
   &:hover {
-    color: $tw-blue-700;
+    color: $tw-primary;
   }
 
   &:hover::after {

@@ -9,7 +9,7 @@ type Props = {
 
 export default function ProjectCard(props: Props) {
   return (
-    <div className='w-full min-h-16 flex flex-col bg-white rounded-md shadow-sm border-b-4 border-b-transparent cursor-pointer p-6 lg:w-[22rem] lg:p-4 hover:border-b-blue-500'>
+    <div className='w-full min-h-16 flex flex-col bg-white rounded-md shadow-sm border-b-4 border-b-transparent cursor-pointer p-6 lg:w-[22rem] lg:p-4 hover:border-b-primary'>
       <h1 className='font-semibold text-base'>{props.title}</h1>
 
       <p className='text-base my-6 lg:my-4'>{props.description}</p>

@@ -1,5 +1,5 @@
-import { FaGithubAlt, FaLinkedin, FaTelegram } from 'react-icons/fa'
-import { MdAlternateEmail } from 'react-icons/md'
+import { BiLogoGmail } from 'react-icons/bi'
+import { FaGithub, FaLinkedin, FaTelegram } from 'react-icons/fa'
 import HeaderBackground from '@/partials/home/HeaderBackground'
 import Avatar from '@/partials/home/Avatar'
 import ContactIcon from '@/partials/home/ContactIcon'
@@ -8,7 +8,7 @@ export default function Header() {
   const contacts = [
     {
       title: 'Email',
-      icon: <MdAlternateEmail className='w-auto h-6 lg:h-8' />,
+      icon: <BiLogoGmail className='w-auto h-8 lg:h-10' />,
       link: 'mailto:sadam21x@gmail.com',
     },
     {
@@ -18,7 +18,7 @@ export default function Header() {
     },
     {
       title: 'GitHub',
-      icon: <FaGithubAlt className='w-auto h-6 lg:h-8' />,
+      icon: <FaGithub className='w-auto h-6 lg:h-8' />,
       link: 'https://github.com/sadam21x',
     },
     {
