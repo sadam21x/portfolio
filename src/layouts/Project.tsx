@@ -1,4 +1,4 @@
-import type { Project } from '@/types/project'
+import type { Project } from '@/lib/types'
 import { BiGlobe } from 'react-icons/bi'
 import { CgOrganisation } from 'react-icons/cg'
 import { FaGithub, FaLink } from 'react-icons/fa'

@@ -1,4 +1,4 @@
-import type { Project } from '@/types/project'
+import type { Project } from '@/lib/types'
 import path from 'path'
 import fs from 'fs'
 import matter from 'gray-matter'

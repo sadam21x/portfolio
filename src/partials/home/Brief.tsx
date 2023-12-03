@@ -1,12 +1,8 @@
 import { AiFillFileText } from 'react-icons/ai'
 
-type Props = {
-  className?: string
-}
-
-export default function Brief(props: Props) {
+export default function Brief() {
   return (
-    <div className={props.className}>
+    <div className='mt-12'>
       <h1 className='font-semibold text-2xl text-primary'>
         What I do?
       </h1>

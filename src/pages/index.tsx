@@ -1,6 +1,6 @@
 import type { GetStaticProps } from 'next'
-import type { Project } from '@/types/project'
-import { getProjects } from '@/utils/project'
+import type { Project } from '@/lib/types'
+import { getProjects } from '@/lib/helpers'
 import Layout from '@/layouts/Main'
 import Header from '@/partials/home/Header'
 import Brief from '@/partials/home/Brief'
@@ -25,8 +25,8 @@ export default function Home(props: Props) {
   return (
     <Layout>
       <Header />
-      <Brief className='mt-12' />
-      <Projects projects={props.projects} className='mt-12' />
+      <Brief />
+      <Projects projects={props.projects} />
     </Layout>
   )
 }

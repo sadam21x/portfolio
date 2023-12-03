@@ -1,7 +1,5 @@
 import { BiLogoGmail } from 'react-icons/bi'
 import { FaGithub, FaLinkedin, FaTelegram } from 'react-icons/fa'
-import HeaderBackground from '@/partials/home/HeaderBackground'
-import Avatar from '@/partials/home/Avatar'
 import ContactIcon from '@/partials/home/ContactIcon'
 
 export default function Header() {
@@ -30,9 +28,18 @@ export default function Header() {
 
   return (
     <>
-      <HeaderBackground />
+      {/* Header Background */}
+      <div className='w-full h-36 relative bg-gray-200 bg-home-header bg-cover bg-center bg-no-repeat rounded-lg lg:h-52' />
+
       <div className='relative z-[2] flex flex-col items-center -mt-16 px-4 lg:flex-row lg:-mt-24 lg:px-12'>
-        <Avatar />
+        {/* Avatar */}
+        <div className='w-28 h-28 rounded-full bg-sky-800 border-2 border-white lg:w-48 lg:h-48'>
+          <img
+            src='https://www.gravatar.com/avatar/77028e9fca037b7dcea01d8220097fe9?s=500'
+            alt='Avatar'
+            className='w-full h-full rounded-full object-contain'
+          />
+        </div>
 
         <div className='font-semibold text-center mt-4 lg:text-left lg:ml-4 lg:mt-20'>
           <p className='text-2xl'>Sadam</p>

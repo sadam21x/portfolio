@@ -1,9 +1,9 @@
 import type { GetStaticPaths, GetStaticProps } from 'next'
 import type { MDXRemoteSerializeResult } from 'next-mdx-remote'
-import type { Project } from '@/types/project'
+import type { Project } from '@/lib/types'
 import { MDXRemote } from 'next-mdx-remote'
 import { serialize } from 'next-mdx-remote/serialize'
-import { getSlugs, findProject } from '@/utils/project'
+import { getSlugs, findProject } from '@/lib/helpers'
 import Layout from '@/layouts/Project'
 import ImageSlideshow from '@/components/ImageSlideshow'
 

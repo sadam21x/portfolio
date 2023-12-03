@@ -10,6 +10,9 @@ const config: Config = {
         poppins: ['Poppins', 'sans-serif'],
         rubik: ['Rubik', 'sans-serif'],
       },
+      backgroundImage: {
+        'home-header': "url('/assets/header-bg.png')",
+      },
     },
   },
   plugins: [
@@ -20,4 +23,5 @@ const config: Config = {
     themes: ['fantasy'],
   },
 }
+
 export default config

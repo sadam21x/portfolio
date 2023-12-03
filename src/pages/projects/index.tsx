@@ -1,7 +1,7 @@
 import type { GetStaticProps } from 'next'
-import type { Project } from '@/types/project'
+import type { Project } from '@/lib/types'
 import Link from 'next/link'
-import { getProjects } from '@/utils/project'
+import { getProjects } from '@/lib/helpers'
 import Layout from '@/layouts/Main'
 import ProjectCard from '@/components/ProjectCard'
 

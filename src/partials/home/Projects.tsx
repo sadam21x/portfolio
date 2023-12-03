@@ -1,15 +1,14 @@
-import type { Project } from '@/types/project'
+import type { Project } from '@/lib/types'
 import Link from 'next/link'
 import ProjectCard from '@/components/ProjectCard'
 
 type Props = {
-  className?: string
   projects: Project[]
 }
 
 export default function Projects(props: Props) {
   return (
-    <div className={props.className}>
+    <div className='mt-12'>
       <h1 className='font-semibold text-2xl text-primary'>
         Featured Projects
       </h1>
