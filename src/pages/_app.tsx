@@ -3,7 +3,7 @@ import { useEffect } from 'react'
 import Router from 'next/router'
 import nProgress from 'nprogress'
 import '@/styles/globals.css'
-import '@/styles/scrollbar.css'
+// import '@/styles/scrollbar.css'
 
 export default function App({ Component, pageProps }: AppProps) {
   useEffect(() => {
