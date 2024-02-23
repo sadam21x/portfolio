@@ -1,0 +1,283 @@
+---
+import { Image } from 'astro:assets'
+import { BiLinkExternal } from 'react-icons/bi'
+import Layout from '@/layouts/Main.astro'
+
+const tech = {
+	frontend: [
+		{
+			title: 'React',
+			logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg',
+		},
+		{
+			title: 'Next.js',
+			logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg',
+		},
+		{
+			title: 'Vue',
+			logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vuejs/vuejs-original.svg',
+		},
+		{
+			title: 'Astro',
+			logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/astro/astro-original.svg',
+		},
+		{
+			title: 'Bootstrap',
+			logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg',
+		},
+		{
+			title: 'Tailwind',
+			logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg',
+		},
+	],
+
+	backend: [
+		{
+			title: 'Laravel',
+			logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-original.svg',
+		},
+		{
+			title: 'Go (Golang)',
+			logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/go/go-original.svg',
+		},
+		{
+			title: 'Node.js',
+			logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original-wordmark.svg',
+		},
+		{
+			title: 'Typescript',
+			logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg',
+		},
+		{
+			title: 'MySQL',
+			logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original-wordmark.svg',
+		},
+		{
+			title: 'PostgreSQL',
+			logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original-wordmark.svg',
+		},
+		{
+			title: 'MongoDB',
+			logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original-wordmark.svg',
+		},
+		{
+			title: 'Redis',
+			logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/redis/redis-original.svg',
+		},
+	],
+
+	other: [
+		{
+			title: 'Wordpress',
+			logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/wordpress/wordpress-original.svg',
+		},
+		{
+			title: 'Linux',
+			logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg',
+		},
+		{
+			title: 'Docker',
+			logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original-wordmark.svg',
+		},
+	],
+}
+
+const experience = [
+	{
+		title: 'Full-stack Developer',
+		company: 'Sustainable Living Lab Pte. Ltd.',
+		location: 'Singapore (Remote)',
+		website: 'https://www.sustainablelivinglab.org',
+		time: 'Nov 2023 - Present',
+		tasks: [
+			'Work closely with design and product teams to develop and deliver high-quality software that ensures a superior user experience.'
+		],
+	},
+	{
+		title: 'Web Developer',
+		company: 'PT Wiraharja Graha Software',
+		location: 'Sidoarjo, Indonesia (Remote)',
+		website: 'https://wiraharja.com',
+		time: 'May 2022 - Sep 2023',
+		tasks: [
+			'Collaborated on the geniebook.com homepage revamp project.',
+			'Developed and maintained LayanObat, a pharmacy management application.',
+		],
+	},
+	{
+		title: 'Front-end Software Engineer Intern',
+		company: 'Jojobug Tech Pte. Ltd.',
+		location: 'Singapore (Remote)',
+		website: 'https://www.jojobug.com',
+		time: 'April 2022 - November 2022',
+		tasks: [
+			'Developed key features for the Jojobug Blog Web App, including post editor, article page, and various APIs.',
+			'Created and launched multiple website templates.',
+			'Collaborated on company landing page development.',
+			'Worked closely with UI/UX Designers to ensure alignment with their creative vision.',
+		],
+	},
+	{
+		title: 'Web Developer Intern',
+		company: 'DPKKA Universitas Airlangga',
+		location: 'Surabaya, Indonesia (Remote)',
+		website: 'https://dpkka.unair.ac.id',
+		time: 'January 2021 - September 2021',
+		tasks: [
+			'Designed, developed, and integrated new features for the DPKKA Website, including a live-chat helpdesk, newsletter, and career counseling app.',
+			'Maintained the Universitas Airlangga Alumni Web Server.',
+			'Assisted with IT-related tasks at various events, such as Airlangga Online Career Fair (AOCF).',
+		],
+	},
+]
+---
+
+<Layout title="About Me | Sadam">
+	<!-- Profile -->
+	<h1 class="text-2xl font-semibold md:text-3xl">
+		Profile
+	</h1>
+
+	<p class="mt-4 text-justify">
+		Experienced software engineer specializing in full-stack web development, adept at driving end-to-end project lifecycles. Passionate about creating user-centric solutions, I blend technical expertise with creative problem-solving to craft efficient, scalable applications. Thriving in collaborative environments, I continually seek new challenges to innovate and deliver impactful digital experiences.
+	</p>
+	<!-- ./Profile -->
+
+	<!-- Tech Stack -->
+	<h1 class="mt-10 text-2xl font-semibold md:text-3xl">
+		Tech Stack
+	</h1>
+	
+	<p class="mt-2 text-justify">
+		I defined myself as an agnostic and adaptable software engineer. I'm always seeking new and exciting technologies to stay up-to-date with the latest trends.
+	</p>
+
+	<p class="mt-2">
+		Here are some of the technologies I've been working with:
+	</p>
+
+	<p class="mt-4 font-bold">
+		Frontend
+	</p>
+
+	<div class="mt-6 flex items-center gap-6">
+		{tech.frontend.map((item) => (
+			<div class="tooltip" data-tip={item.title}>
+				<Image src={item.logo} alt={item.title} width={40} height={40} loading="eager" />
+			</div>
+		))}
+	</div>
+	
+	<p class="mt-8 font-bold">
+		Backend
+	</p>
+
+	<div class="mt-6 flex items-center gap-6">
+		{tech.backend.map((item) => (
+			<div class="tooltip" data-tip={item.title}>
+				<Image src={item.logo} alt={item.title} width={40} height={40} loading="eager" />
+			</div>
+		))}
+	</div>
+	
+	<p class="mt-8 font-bold">
+		Other
+	</p>
+
+	<div class="mt-6 flex items-center gap-6">
+		{tech.other.map((item) => (
+			<div class="tooltip" data-tip={item.title}>
+				<Image src={item.logo} alt={item.title} width={40} height={40} loading="eager" />
+			</div>
+		))}
+	</div>
+	<!-- ./Tech Stack -->
+
+	<!-- Education -->
+	<h1 class="mt-16 text-2xl font-semibold md:text-3xl">
+		Education
+	</h1>
+
+	<div class="mt-4 card w-full bg-base-100 border shadow">
+		<div class="card-body">
+			<div class="flex flex-col items-start gap-4 md:flex-row">
+				<Image src="/assets/img/unair-logo.png" alt="unair-logo" width={50} height={50} loading="eager" />
+
+				<div class="space-y-1">
+					<h2 class="card-title">
+						Associate's Degree in Information System
+					</h2>
+		
+					<p class="text-sm">
+						<span class="font-semibold">
+							Universitas Airlangga
+						</span>
+						| Aug 2018 - Jan 2022
+						| Surabaya, East Java, Indonesia
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- ./Education -->
+
+	<!-- Experience -->
+	<h1 class="mt-10 mb-6 text-2xl font-semibold md:text-3xl">
+		Experience
+	</h1>
+
+	{experience.map((item) => (
+		<div class="experience">
+			<p class="text-xl">
+				<span class="font-semibold">
+					{item.title}
+				</span> |
+				<a href={item.website} target="_blank" rel="noreferrer" class="hover:underline">
+					{item.company} <BiLinkExternal size={18} className="inline -mt-1" />	
+				</a>
+			</p>
+
+			<p class="mt-1 text-sm">
+				{item.time} | {item.location}
+			</p>
+
+			<ul class="mt-4 text-sm">
+				{item.tasks.map((task) => <li class="list-disc list-inside">{task}</li>)}
+			</ul>
+		</div>
+	))}
+	<!-- ./Experience -->
+</Layout>
+
+<style>
+	.experience {
+		position: relative;
+		padding-left: 2.5rem;
+		padding-bottom: 2.5rem;
+	}
+
+	.experience::before {
+		content: '';
+		position: absolute;
+		top: 4%;
+		left: 0;
+		height: 1rem;
+		width: 1rem;
+		border-radius: 50%;
+		background-color: purple;
+	}
+
+	.experience::after {
+		content: '';
+		position: absolute;
+		top: 5%;
+		left: 0.35rem;
+		height: 100%;
+		width: 0.25rem;
+		background-color: purple;
+	}
+
+	.experience:last-child::after {
+		display: none;
+	}
+</style>

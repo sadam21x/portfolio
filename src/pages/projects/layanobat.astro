@@ -1,0 +1,63 @@
+---
+import Layout from '@/layouts/Project.astro'
+import ImageSlideshow from '@/components/ImageSlideshow.tsx'
+
+const features = [
+    'Inventory Management',
+    'Point of Sales (POS)',
+    'Report Generation',
+    'Customer Relationship Management (CRM)',
+    'Cloud Synchronization',
+]
+
+const slideshow = [
+    {
+        src: '/assets/projects/layanobat/desktop-inventory.png',
+        caption: 'Desktop - Inventory Management',
+    },
+    {
+        src: '/assets/projects/layanobat/desktop-pos.png',
+        caption: 'Desktop - Point of Sales (POS)',
+    },
+    {
+        src: '/assets/projects/layanobat/desktop-sales-report.png',
+        caption: 'Desktop - Sales Report',
+    },
+    {
+        src: '/assets/projects/layanobat/desktop-import-data.png',
+        caption: 'Desktop - Import Data',
+    },
+    {
+        src: '/assets/projects/layanobat/web-create-new-pharmacy.png',
+        caption: 'Web - Create New Pharmacy',
+    },
+    {
+        src: '/assets/projects/layanobat/web-inventory-report.png',
+        caption: 'Web - Inventory Report',
+    },
+    {
+        src: '/assets/projects/layanobat/web-download.png',
+        caption: 'Download App',
+    },
+]
+---
+
+<Layout>
+    <p class="mt-16 text-lg font-semibold">
+        Screenshots
+    </p>
+    
+    <ImageSlideshow images={slideshow} className="mt-4" client:load />
+    
+    <p class="mt-10 leading-relaxed">
+        <span class="font-semibold">LayanObat</span> is an innovative pharmacy management application designed to simplify the process of managing your pharmacy. With its powerful features, LayanObat makes it easy for pharmacists and pharmacy owners to keep track of inventory, sales, and customer data.
+    </p>
+
+    <p class="mt-8 font-semibold">
+        Core Features:
+    </p>
+
+    <ul class="mt-2 pl-4 list-disc list-inside">
+        {features.map((feature) => <li>{feature}</li>)}
+    </ul>
+</Layout>

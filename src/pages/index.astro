@@ -1,0 +1,39 @@
+---
+import { CgFileDocument } from 'react-icons/cg'
+import { FaCode } from 'react-icons/fa6'
+import Layout from '@/layouts/Main.astro'
+import ProjectCard from '@/components/ProjectCard.astro'
+import projects from '@/data/projects'
+---
+
+<Layout title="Home | Sadam">
+	<p class="text-lg">
+		Hey there 👋
+	</p>
+
+	<p class="mt-2 text-4xl font-semibold md:mt-4 md:text-5xl">
+		I'm Sadam
+	</p>
+	
+	<p class="mt-4 text-lg font-medium md:text-xl">
+		Software Engineer 👨‍💻 from Bali, Indonesia 🏝️
+	</p>
+
+	<p class="mt-6 md:text-lg">
+		I specialize in full-stack web development, I can help you with your next project. From the initial idea to the final product. Whether it's a simple company profile or a complex web application with tons of features and daily users.
+	</p>
+
+	<a href="/download/Resume_Sadam.pdf" target="_blank" class="btn btn-outline mt-6">
+		<CgFileDocument size={18} />
+		Resume
+	</a>
+
+	<h1 class="mt-16 flex items-center gap-4 text-2xl font-semibold md:text-3xl">
+		<FaCode />
+		Featured Projects
+	</h1>
+
+	<div class="mt-8 flex flex-wrap justify-center gap-x-12 gap-y-16">
+        {projects.filter(project => project.featured).map((project) => <ProjectCard {...project} />)}
+    </div>
+</Layout>

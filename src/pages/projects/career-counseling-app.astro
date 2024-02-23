@@ -1,0 +1,73 @@
+---
+import Layout from '@/layouts/Project.astro'
+import ImageSlideshow from '@/components/ImageSlideshow.tsx'
+
+const features = [
+    'Counseling Scheduling',
+    'Invitation and Reminder Email',
+    'Secure Intuitive Chat Room',
+]
+
+const slideshow = [
+    {
+        src: '/assets/projects/career-counseling-app/login-page.png',
+        caption: 'Login Page',
+    },
+    {
+        src: '/assets/projects/career-counseling-app/new-counseling-form.png',
+        caption: 'New Counseling Form',
+    },
+    {
+        src: '/assets/projects/career-counseling-app/chat-room.png',
+        caption: 'Chat Room',
+    },
+    {
+        src: '/assets/projects/career-counseling-app/send-file.png',
+        caption: 'Send File',
+    },
+    {
+        src: '/assets/projects/career-counseling-app/reply-button.png',
+        caption: 'Reply Message',
+    },
+    {
+        src: '/assets/projects/career-counseling-app/reply-message.png',
+        caption: 'Reply Message',
+    },
+    {
+        src: '/assets/projects/career-counseling-app/mobile-view-new-counseling-form.png',
+        caption: 'Mobile View - New Counseling Form',
+    },
+    {
+        src: '/assets/projects/career-counseling-app/mobile-view-chat-room.png',
+        caption: 'Mobile View - Chat Room',
+    },
+]
+---
+
+<Layout>
+    <p class="mt-16 text-lg font-semibold">
+        Screenshots
+    </p>
+    
+    <ImageSlideshow images={slideshow} className="mt-4" client:load />
+
+    <p class="mt-10 leading-relaxed">
+        As the job market becomes more competitive, students and alumni need all the help they can get to achieve their career goals. That's where the Career Counseling App comes in. This web-based chat application provides online counseling services to students and alumni, helping them explore their career options, make informed decisions, and achieve their goals.
+    </p>
+
+    <p class="mt-4 leading-relaxed">
+        One of the key features of this app is scheduling functionality. Students and alumni can easily schedule a counseling session with a counselor through the app, making it simple to find a time that works for both parties. In addition, the app has an invitation and reminder email feature, ensuring that students and alumni don't miss their counseling sessions.
+    </p>
+
+    <p class="mt-4 leading-relaxed">
+        Once the counseling session is scheduled, the intuitive and secure chat room allows for an interactive and personalized experience. The chat room is encrypted to ensure the privacy and confidentiality of the counseling session, giving students and alumni the confidence to share their thoughts, feelings, and concerns with the counselor. Meanwhile, the counselor can provide guidance, advice, and resources to help students and alumni make informed decisions about their career paths.
+    </p>
+
+    <p class="mt-8 font-semibold">
+        Core Features:
+    </p>
+
+    <ul class="mt-2 pl-4 list-disc list-inside">
+        {features.map((feature) => <li>{feature}</li>)}
+    </ul>
+</Layout>

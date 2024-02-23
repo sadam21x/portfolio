@@ -1,0 +1,23 @@
+---
+import Layout from '@/layouts/Project.astro'
+
+const features = [
+    'Certificate Builder',
+    'Certificate Management',
+    'Certificate Distribution',
+]
+---
+
+<Layout>
+    <p class="leading-relaxed">
+        Certificates are an important part of one's educational journey. However, the process of creating and managing certificates can be complex and time-consuming. Introducing, <span class="font-semibold">E-Sertifikat</span>, a web-based application that can help campus authorities in creating, managing, and distributing digital certificates to students.
+    </p>
+
+    <p class="mt-8 font-semibold">
+        Core Features:
+    </p>
+
+    <ul class="mt-2 pl-4 list-disc list-inside">
+        {features.map((feature) => <li>{feature}</li>)}
+    </ul>
+</Layout>

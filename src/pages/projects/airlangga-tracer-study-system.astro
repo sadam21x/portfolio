@@ -1,0 +1,31 @@
+---
+import Layout from '@/layouts/Project.astro'
+
+const features = [
+    'Survey Creation',
+    'Email Blaster',
+    'Report Generation',
+]
+---
+
+<Layout>
+    <p class="leading-relaxed">
+        This is a web application developed to gather career data from the alumni of Universitas Airlangga. This online survey-based platform is designed to help the university understand its alumni's career paths after graduation.
+    </p>
+
+    <p class="mt-4 leading-relaxed">
+        One of the main features of this app is the ability to create customizable surveys that can be sent to alumni via email. These surveys are tailored to collect valuable data on alumni's career choices, including job titles, industry sectors, and salary ranges. The email blaster feature allows sending survey links to thousands of alumni with just a few clicks.
+    </p>
+
+    <p class="mt-4 leading-relaxed">
+        In addition to creating surveys and blasting emails, this app generates comprehensive reports showcasing the collected data. The reports provide valuable insights into alumni career paths and help the university make informed decisions about its academic programs.
+    </p>
+
+    <p class="mt-8 font-semibold">
+        Core Features:
+    </p>
+
+    <ul class="mt-2 pl-4 list-disc list-inside">
+        {features.map((feature) => <li>{feature}</li>)}
+    </ul>
+</Layout>
