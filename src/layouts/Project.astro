@@ -4,45 +4,34 @@ import { BiGlobe } from 'react-icons/bi'
 import { CgOrganisation } from 'react-icons/cg'
 import { FaGithub } from 'react-icons/fa'
 import Layout from '@/layouts/Main.astro'
-import { findProjectBySlug } from '@/data/projects'
+import { findProjectByPath } from '@/data/projects'
 
 interface Props {
 	title?: string
 }
 
 const { title = 'Projects | Sadam' } = Astro.props
-const slug = Astro.url.pathname.split('/').pop()
-const project = findProjectBySlug(slug as string)
-
-if (!project) {
-    const error = await fetch(`${Astro.url}/404`)
-    
-    return new Response(error.body, {
-        headers: error.headers,
-        status: 404,
-        statusText: 'Not Found'
-    })
-}
+const project = findProjectByPath(Astro.url.pathname)
 ---
 
 <Layout title={title}>
     <h1 class="text-xl font-semibold md:text-3xl">
-		{project.title}
+		{project?.title}
 	</h1>
 
     <p class="mt-4">
-		{project.description}
+		{project?.description}
 	</p>
     
     <div class="mt-8 flex flex-wrap items-center gap-x-6 gap-y-4">
-        {project.repository && (
+        {project?.repository && (
             <a href={project.repository} target="_blank" rel="noreferrer" class="flex flex-wrap items-center gap-2 hover:underline">
                 <FaGithub className="text-xl" />
                 <p class="text-lg">Repository</p>
             </a>
         )}
 
-        {project.demo && (
+        {project?.demo && (
             <a href={project.demo} target="_blank" rel="noreferrer" class="flex flex-wrap items-center gap-2 hover:underline">
                 <BiGlobe className="text-xl" />
                 <p class="text-lg">Website</p>
@@ -50,7 +39,7 @@ if (!project) {
         )}
         
         
-        {project.org && (
+        {project?.org && (
             <a href={project.org.url} target="_blank" rel="noreferrer" class="flex flex-wrap items-center gap-2 hover:underline">
                 <CgOrganisation className="text-xl" />
                 <p class="text-lg">{project.org.name}</p>
@@ -60,7 +49,9 @@ if (!project) {
 
     <hr class="mt-4 mb-8" />
 
-    <Image src={project.cover} alt="cover" width={1000} height={750} loading="eager" class="w-full h-auto mb-8 mx-auto rounded-xl shadow-xl md:w-auto md:h-96" />
+    {project?.cover && (
+        <Image src={project.cover} alt="cover" width={1000} height={750} loading="eager" class="w-full h-auto mb-8 mx-auto rounded-xl shadow-xl md:w-auto md:h-96" />
+    )}
     
     <slot />
 </Layout>

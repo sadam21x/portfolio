@@ -53,8 +53,8 @@ const projects = [
     },
 ]
 
-export function findProjectBySlug(slug: string) {
-    return projects.find((project) => project.url.split('/').pop() === slug)
+export function findProjectByPath(pathName: string) {
+    return projects.find((project) => pathName.startsWith(project.url))
 }
 
 export default projects
