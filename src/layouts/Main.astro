@@ -63,6 +63,7 @@ const menu = [
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
+		<meta name="description" content="A professional software engineer">
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
@@ -71,8 +72,6 @@ const menu = [
 	</head>
 	<body class="max-w-[1920px] mx-auto font-poppins">
 		<div class="drawer lg:drawer-open">
-			<input id="sidebar" type="checkbox" class="drawer-toggle" />
-
 			<div class="drawer-content px-4 py-6 lg:p-16">
 				<div class="pb-4 border-b flex justify-between items-center lg:hidden">
 					<a href="/" class="flex items-center">
@@ -80,7 +79,7 @@ const menu = [
 						<h1 class="ml-4 text-2xl font-semibold">Sadam</h1>
 					</a>
 
-					<label for="sidebar" class="cursor-pointer">
+					<label id="sidebar-toggle" for="sidebar" class="cursor-pointer">
 						<RiMenu3Fill size={32} />
 					</label>
 				</div>
@@ -89,6 +88,8 @@ const menu = [
 					<slot />
 				</main>
 			</div>
+
+			<input id="sidebar" type="checkbox" class="drawer-toggle" aria-labelledby="sidebar-toggle" />
 			
 			<div class="drawer-side">
 				<label for="sidebar" class="drawer-overlay"></label> 
