@@ -55,7 +55,7 @@ const menu = [
         label: 'About Me',
         href: '/about',
         icon: ImProfile,
-        isCurrent: Astro.url.pathname === '/about',
+        isCurrent: Astro.url.pathname.startsWith('/about'),
     },
 ]
 ---
