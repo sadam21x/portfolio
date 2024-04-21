@@ -2,7 +2,6 @@
 export default {
 	darkMode: 'class',
 	content: [
-		'./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}',
 		'./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'
 	],
 	theme: {
@@ -12,8 +11,8 @@ export default {
 			},
 		},
 	},
-	plugins: [require("daisyui")],
+	plugins: [require('daisyui')],
 	daisyui: {
-		themes: ["fantasy"],
+		themes: ['lofi'],
 	},
 }
